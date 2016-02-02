@@ -29,10 +29,11 @@ def assert_true(expr, msg=None):
         if msg:
             print msg
 
-def assert_that(expr):
-    assert_true(expr)
+def untitle(s):
+    return s[0].lower() + s[1:]
 
 module = sys.modules[__name__]
 setattr(module, 'assert_that', module.__dict__['assert_true'])
-[setattr(module, ''.join([s.title() for s in k.split('_')]), v)
+setattr(module, 'assert_equals', module.__dict__['assert_equal'])
+[setattr(module, untitle(''.join([s.title() for s in k.split('_')])), v)
         for k, v in module.__dict__.items() if 'assert' in k]
