@@ -1,7 +1,23 @@
 unittestZ
 --
 
-Idea
+Install
 --
-Dream is for this to be a drop in replacement for the unittest2 assertion framework and maybe one day the test runner itself. It will be written to be compatible with the nosetests (snake case) style assertions and have the alternate function names injected into the namespace.
+```
+pip install unittestZ
+```
 
+Usage
+--
+```
+from unittestZ.assertion import *
+# Or your prefered method
+
+>> assert_equal("a", "b")
+file.py:L# self.assert_equal("a", "b")
+Actual: a
+Expect: b
+
+>> AssertEqual("a", "b")
+< same as above >
+```

@@ -9,6 +9,5 @@ setup(
   url = 'https://github.com/zaquestion/unittestZ', # use the URL to the github repo
   download_url = 'https://github.com/peterldowns/mypackage/tarball/0.1', # I'll explain this in a second
   keywords = ['testing', 'assert', 'assertion', 'unittest2', 'nose'], # arbitrary keywords
-  classifiers = [],
+  classifiers = []
 )
-`
